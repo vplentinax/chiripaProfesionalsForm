@@ -1,0 +1,195 @@
+.form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.leftForm {
+  width: 30%;
+  height: 100vh;
+  background-color: #493AFF;
+  color: #fff;
+  padding: 30px 20px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.rightForm {
+  width: 70%;
+  height: 100%;
+  background-color: #fff;
+  padding: 30px 100px 30px 100px;
+  /* background-color: lightgray; */
+}
+
+.leftMid {
+  height: 60%;
+  /* background-color: lightcyan; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.chiripaName {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.unete {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.registrate {
+  font-size: 15px;
+}
+
+.mantente {
+  font-weight: bold;
+}
+
+.iconsRedes {
+  width: 100%;
+  display: flex;
+  margin-top: 10px;
+}
+
+.insta {
+  margin-right: 20px;
+}
+
+.titleF {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.formBox {
+  margin-top: 80px;
+  position: relative;
+
+}
+
+.formServicies {
+  width: 100%;
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+}
+
+.inputName,
+.customSelect {
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 70px;
+  background-color: #F7F7FB;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: 'Montserrat';
+}
+
+.customSelect {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all .2s ease;
+  padding: 15px;
+  margin-bottom: 90px;
+}
+
+
+
+.selectLabel {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  color: gray;
+  padding: 10px 5px 10px 5px;
+}
+
+.selectLabel>span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.optionsBox,
+.optionsBoxHidden {
+  margin-top: 75px;
+  width: 100%;
+  height: 250px;
+  overflow: scroll;
+  position: absolute;
+  z-index: 100;
+  border: 2px solid #F7F7FB;
+  background-color: #fff;
+  left: 0;
+}
+
+.optionsBox>li,
+.optionsBoxHidden>li {
+  list-style-type: none;
+  width: 100%;
+  height: 30px;
+  margin-bottom: 5px;
+  padding: 5px;
+  transition: all .2s ease;
+}
+
+.optionsBox>li:hover,
+.optionsBoxHidden>li:hover {
+  background-color: #4a3aff7b
+}
+
+.optionsBoxHidden {
+  display: none;
+}
+
+.inputsCheckbox {
+  margin-bottom: 20px;
+}
+
+.inputsCheckbox>input {
+  margin-right: 10px;
+}
+
+.inputsCheckbox>span>span {
+  text-decoration: underline;
+
+}
+
+.inputsButtonSubmit{
+  margin-top: 50px;
+  outline: none;
+  border: none;
+  background-color: #4D589E;
+  padding: 15px;
+  border-radius: 50px;
+  color: #fff;
+  width: max-content;
+  font-family: 'Montserrat';
+  /* font-size: 16px; */
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.inputsButtonSubmit:active {
+  transform: scale(.95);
+}
+
+.footer {
+  opacity: 0.5;
+  font-size: 14px;
+}
