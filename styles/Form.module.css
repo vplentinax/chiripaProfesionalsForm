@@ -11,7 +11,7 @@
   height: 100vh;
   background-color: #493AFF;
   color: #fff;
-  padding: 30px 20px 30px 30px;
+  padding: 50px 20px 50px 30px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -22,7 +22,7 @@
   width: 70%;
   height: 100%;
   background-color: #fff;
-  padding: 30px 100px 30px 100px;
+  padding: 20px 100px 30px 100px;
   /* background-color: lightgray; */
 }
 
@@ -46,6 +46,7 @@
 
 .registrate {
   font-size: 15px;
+  line-height: 32px;
 }
 
 .mantente {
@@ -65,13 +66,12 @@
 .titleF {
   font-size: 20px;
   font-weight: bold;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .formBox {
-  margin-top: 80px;
+  margin-top: 50px;
   position: relative;
-
 }
 
 .formServicies {
@@ -82,6 +82,7 @@
 }
 
 .inputName,
+.inputResume,
 .customSelect {
   outline: none;
   border: none;
@@ -95,6 +96,7 @@
   font-family: 'Montserrat';
 }
 
+
 .customSelect {
   cursor: pointer;
   display: flex;
@@ -102,7 +104,12 @@
   position: relative;
   transition: all .2s ease;
   padding: 15px;
-  margin-bottom: 90px;
+  margin-bottom: 20px;
+}
+
+.inputResume{
+  height: 100px;
+  margin-bottom: 50px;
 }
 
 
@@ -163,13 +170,13 @@
   margin-right: 10px;
 }
 
-.inputsCheckbox>span>span {
+.inputsCheckbox>span>.link >span {
   text-decoration: underline;
 
 }
 
-.inputsButtonSubmit{
-  margin-top: 50px;
+.inputsButtonSubmit {
+  margin-top: 30px;
   outline: none;
   border: none;
   background-color: #4D589E;
@@ -187,6 +194,12 @@
 
 .inputsButtonSubmit:active {
   transform: scale(.95);
+}
+.inputMesagge > span {
+  margin-left: 20px;
+  color: rgb(232, 107, 107);
+  font-weight: bold;
+  font-size: 14px;
 }
 
 .footer {

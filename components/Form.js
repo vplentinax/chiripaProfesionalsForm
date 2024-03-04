@@ -1,14 +1,19 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "../styles/Form.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
 const Form = () => {
-  const [categories, setCategories] = useState([]);
   const [displaySelectOptions, setDisplaySelectOptions] = useState(false);
   const [selectOptions, setSelectOptions] = useState("Category");
+  const [message, setMessage] = useState("");
+  const refInputName = useRef();
+  const refInputTel = useRef();
+  const refInputTextArea = useRef();
+  const refCheckTerms = useRef();
+  const refCheckPoli = useRef();
 
   let arrayCategory = [
     { id: 1, name: "Electricidad" },
@@ -37,6 +42,43 @@ const Form = () => {
     setSelectOptions(item);
     setDisplaySelectOptions(false);
   };
+
+  const handlerForm = (e) => {
+    e.preventDefault();
+    let valueName = refInputName.current.value;
+    let valueTel = refInputTel.current.value;
+    let valueTextArea = refInputTextArea.current.value;
+    let valueCheckT = refCheckTerms.current.checked;
+    let valueCheckP = refCheckPoli.current.checked;
+    let valueCategory = selectOptions;
+
+    if (valueName.length > 10) {
+      if (valueTel.length > 5) {
+        if (valueCategory !== "Category") {
+          if (valueTextArea.length > 100) {
+            if (valueCheckT) {
+              if (valueCheckP) {
+                console.log("enviamos respuestas");
+              } else {
+                setMessage("Debe aceptar nuestras políticas de privacidad");
+              }
+            } else {
+              setMessage("Debe aceptar nuestros términos y condiciones");
+            }
+          } else {
+            setMessage("Debe escribir una descripción más larga");
+          }
+        } else {
+          setMessage("Debe elegir una categoría");
+        }
+      } else {
+        setMessage("Debe escribir un teléfono válido");
+      }
+    } else {
+      setMessage("Debe escribir el nombre y apellidos completos");
+    }
+  };
+
 
   return (
     <div className={styles.form}>
@@ -91,16 +133,21 @@ const Form = () => {
           </div>
         </div>
         <div className={styles.formBox}>
-          <form className={styles.formServicies}>
+          <form
+            className={styles.formServicies}
+            onSubmit={(e) => handlerForm(e)}
+          >
             <input
               type="text"
               placeholder="escriba su nombre y apellido aquí"
               className={styles.inputName}
+              ref={refInputName}
             />
             <input
               type="text"
               placeholder="escriba su  número telefónico"
               className={styles.inputName}
+              ref={refInputTel}
             />
 
             <div className={styles.customSelect}>
@@ -129,17 +176,41 @@ const Form = () => {
               </div>
             </div>
 
+            <textarea
+              type="text"
+              placeholder="Describe tu experiencia en menos de 180 caracteres"
+              maxLength={180}
+              className={styles.inputResume}
+              ref={refInputTextArea}
+              // onBlur={(e) =>handlerInput(e)}
+            />
+
             <div className={styles.inputsCheckbox}>
-              <input type="checkbox" />
-              <span>Acepto todos <span>los terminos y condiciones</span></span>
+              <input type="checkbox" defaultChecked ref={refCheckTerms} />
+              <span>
+                Acepto todos{" "}
+                <Link href="/terminos" target="_blank" className={styles.link}>
+                  <span>los términos y condiciones</span>
+                </Link>
+              </span>
             </div>
 
             <div className={styles.inputsCheckbox}>
-              <input type="checkbox"  defaultChecked/>
-              <span>Acepto las <span>politicas de privacidad</span></span>
+              <input type="checkbox" defaultChecked ref={refCheckPoli} />
+              <span>
+                Acepto las{" "}
+                <Link href="/politicas" target="_blank" className={styles.link}>
+                  <span>políticas de privacidad</span>
+                </Link>
+              </span>
             </div>
 
-            <button className={styles.inputsButtonSubmit}> Procesar Solicitud</button>
+            <div className={styles.inputMesagge}>
+              <button className={styles.inputsButtonSubmit}>
+                Procesar Solicitud
+              </button>
+              <span>{message}</span>
+            </div>
           </form>
         </div>
       </div>
