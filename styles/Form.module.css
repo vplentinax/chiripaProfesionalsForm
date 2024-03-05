@@ -202,6 +202,13 @@
   font-size: 14px;
 }
 
+.inputMesagge > span:last-child{
+  margin-left: 20px;
+  color: rgb(21, 105, 21);
+  font-weight: bold;
+  font-size: 14px;
+}
+
 .footer {
   opacity: 0.5;
   font-size: 14px;

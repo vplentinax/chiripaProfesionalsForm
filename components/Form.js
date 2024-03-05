@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import styles from "../styles/Form.module.css";
+import { useRouter } from 'next/navigation'
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,11 +10,13 @@ const Form = () => {
   const [displaySelectOptions, setDisplaySelectOptions] = useState(false);
   const [selectOptions, setSelectOptions] = useState("Category");
   const [message, setMessage] = useState("");
+  const [messageCorrect, setMessageCorrect] = useState('')
   const refInputName = useRef();
   const refInputTel = useRef();
   const refInputTextArea = useRef();
   const refCheckTerms = useRef();
   const refCheckPoli = useRef();
+  const router = useRouter()
 
   let arrayCategory = [
     { id: 1, name: "Electricidad" },
@@ -58,8 +61,10 @@ const Form = () => {
           if (valueTextArea.length > 100) {
             if (valueCheckT) {
               if (valueCheckP) {
-                setMessage('')
-                console.log("enviamos respuestas");
+                setMessageCorrect('Enviando datos')
+                setTimeout(() => {
+                  router.push('/recibido')
+                }, 2000)
               } else {
                 setMessage("Debe aceptar nuestras políticas de privacidad");
               }
@@ -211,6 +216,7 @@ const Form = () => {
                 Procesar Solicitud
               </button>
               <span>{message}</span>
+              <span>{messageCorrect}</span>
             </div>
           </form>
         </div>
