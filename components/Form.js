@@ -61,6 +61,7 @@ const Form = () => {
           if (valueTextArea.length > 100) {
             if (valueCheckT) {
               if (valueCheckP) {
+                setMessage('')
                 setMessageCorrect('Enviando datos')
                 setTimeout(() => {
                   router.push('/recibido')
