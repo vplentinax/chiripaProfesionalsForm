@@ -7,10 +7,10 @@ const Terminos = () => {
       <div className={styles.parrafo}>
         <h2>Términos y Condiciones de Chiripa RD</h2>
         <p>
-          ¡Bienvenido/a a Chiripa RD! Antes de utilizar nuestra aplicación
-          móvil, lea detenidamente estos Términos y Condiciones. Al acceder y
-          utilizar nuestra aplicación, usted acepta estar legalmente vinculado
-          por estos términos.
+          ¡Bienvenidos a Chiripa RD! Antes de utilizar nuestra aplicación móvil,
+          lea detenidamente estos Términos y Condiciones. Al acceder y utilizar
+          nuestra aplicación, usted acepta estar legalmente vinculado por estos
+          términos.
         </p>
       </div>
       <div className={styles.parrafo}>
@@ -76,16 +76,16 @@ const Terminos = () => {
         <h3>7. Legislación Aplicable:</h3>
         <p>
           Estos Términos y Condiciones se regirán e interpretarán de acuerdo con
-          las leyes de República Dominicana. Cualquier disputa que surja en relación con
-          estos términos estará sujeta a la jurisdicción exclusiva de los
-          tribunales de Santo Domingo.
+          las leyes de República Dominicana. Cualquier disputa que surja en
+          relación con estos términos estará sujeta a la jurisdicción exclusiva
+          de los tribunales de Santo Domingo.
         </p>
       </div>
       <p>
-      Gracias por utilizar Chiripa RD. Si tiene alguna pregunta o inquietud
-      sobre estos Términos y Condiciones, no dude en ponerse en contacto con
-      nosotros a través de nuestras redes sociales. Fecha de entrada en
-      vigencia: 24 Febrero 2024
+        Gracias por utilizar Chiripa RD. Si tiene alguna pregunta o inquietud
+        sobre estos Términos y Condiciones, no dude en ponerse en contacto con
+        nosotros a través de nuestras redes sociales. Fecha de entrada en
+        vigencia: 24 Febrero 2024
       </p>
     </div>
   );

@@ -7,7 +7,7 @@ const Politicas = () => {
       <div className={styles.parrafo}>
         <h2>Política de Privacidad de Chiripa RD</h2>
         <p>
-          Bienvenido/a a Chiripa RD. Nos tomamos muy en serio la privacidad de
+          Bienvenidos a Chiripa RD. Nos tomamos muy en serio la privacidad de
           nuestros usuarios y la protección de sus datos personales. Esta
           Política de Privacidad describe cómo Chiripa RD recopila, utiliza y protege la información que usted
           proporciona al utilizar nuestra aplicación móvil.
