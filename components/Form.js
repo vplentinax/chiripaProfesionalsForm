@@ -58,6 +58,7 @@ const Form = () => {
           if (valueTextArea.length > 100) {
             if (valueCheckT) {
               if (valueCheckP) {
+                setMessage('')
                 console.log("enviamos respuestas");
               } else {
                 setMessage("Debe aceptar nuestras políticas de privacidad");

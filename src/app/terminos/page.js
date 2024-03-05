@@ -20,7 +20,7 @@ const Terminos = () => {
           registrarse y ofrecer sus servicios a los usuarios que buscan
           contratarlos. Al registrarse en nuestra aplicación, usted acepta
           proporcionar información precisa y actualizada sobre su perfil
-          profesional.{" "}
+          profesional.
         </p>
       </div>
       <div className={styles.parrafo}>
