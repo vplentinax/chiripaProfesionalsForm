@@ -9,8 +9,8 @@ const Politicas = () => {
         <p>
           Bienvenido/a a Chiripa RD. Nos tomamos muy en serio la privacidad de
           nuestros usuarios y la protección de sus datos personales. Esta
-          Política de Privacidad describe cómo Chiripa RD ("nosotros",
-          "nuestro", "nos") recopila, utiliza y protege la información que usted
+          Política de Privacidad describe cómo Chiripa RD ('nosotros',
+          'nuestro', 'nos') recopila, utiliza y protege la información que usted
           proporciona al utilizar nuestra aplicación móvil.
         </p>
       </div>
